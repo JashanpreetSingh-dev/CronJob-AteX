@@ -17,6 +17,8 @@ def write_data():
     Db_Client = pymongo.MongoClient(MONGO_CONNECTION_URI)
     db = Db_Client.get_database('prototype')
     collection = db.get_collection('orders')
+    some_data = [{"price": 200.0, "Discount": 0, "OrderCount": 2},{"price": 230.0, "Discount": 20, "OrderCount": 21},
+                 {"price": 450.0, "Discount": 70, "OrderCount": 1}]
     # diction = {"name": "SomeOne'sName", "age": "NotTooOld"}
-    list_of_docs = get_unicorns()
-    collection.insert_many(list_of_docs)
+    # list_of_docs = get_unicorns()
+    collection.insert_many(some_data)
