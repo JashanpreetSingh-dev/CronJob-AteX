@@ -19,4 +19,4 @@ def write_data():
     collection = db.get_collection('orders')
     # diction = {"name": "SomeOne'sName", "age": "NotTooOld"}
     list_of_docs = get_unicorns()
-    collection.insert_one(list_of_docs)
+    collection.insert_many(list_of_docs)
